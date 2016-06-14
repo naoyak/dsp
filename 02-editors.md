@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> vim, since I've worked with it on several occasions and am familiar with the keyboard controls (if not quite fluent).
 
 --
 
@@ -68,6 +68,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Sublime Text, since I've used it for about 3 years without major incident. The package control system is really useful, and the window splitting can be a lifesaver when working on multiple groups of files simultaneously. I need to get more familiar with the shortcuts, but Ctrl-D for highlighting multiple instances of a word is pretty key. I usually customize by looking for add-ins on Package Control.
 
  
