@@ -46,13 +46,16 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python 3, since I've been working recently more with 3 and most tools / resources seem to emphasize 3.5 as the preferred version lately.
 
 ###Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+```
+13:53 $ python -V
+Python 3.5.1 :: Anaconda 2.4.0 (x86_64)
+```
 
  
 
