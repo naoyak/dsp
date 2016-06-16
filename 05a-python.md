@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Tuples and lists are both ordered sequences of values, with the important difference that tuples are immutable - you can't modify individual elements. Only tuples will work as dictionary keys, since the lookup function would break if a mutable key's value was modified.
 
 ---
 
@@ -20,7 +20,18 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and sets are both collections of elements which can be of mixed type, but lists are ordered while sets are unordered and consist of unique elements.
+
+```python
+member_list = ['Amy', 'John', 'Ben', John']
+>>> member_list
+['Amy', 'John', 'Ben', 'John']
+member_set = {'Amy', 'John', 'Ben', 'John'}
+>>> member_set
+{'Amy', 'John', 'Ben'} # duplicates removed
+```
+
+Finding and element is much faster in sets, since membership is checked with a hashtable.
 
 ---
 
@@ -28,7 +39,14 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lambda functions are anonymous functions that can be created without a full named function declaration. This is often useful for passing to functions which expect a function object as an argument.
+
+```python
+In [1]: nums = [12, -33, 35, -2, 0]
+In [2]: sorted(nums, key=lambda x: x^2-1)
+Out[2]: [-33, -2, 0, 12, 35]
+```
+
 
 ---
 
@@ -49,25 +67,37 @@ a.
 ```
 date_start = '01-02-2013'    
 date_stop = '07-28-2015'
+
+In [17]:  datetime.strptime(date_stop, '%m-%d-%Y') - datetime.strptime(date_sta
+rt, '%m-%d-%Y')
+Out[17]: datetime.timedelta(937)
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937 days
 
 b.  
 ```
 date_start = '12312013'  
 date_stop = '05282015'  
+
+In [20]:  datetime.strptime(date_stop, '%m%d%Y') - datetime.strptime(date_start
+, '%m%d%Y')
+Out[20]: datetime.timedelta(513)
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513 days
 
 c.  
 ```
 date_start = '15-Jan-1994'      
-date_stop = '14-Jul-2015'  
+date_stop = '14-Jul-2015' 
+
+In [24]:  datetime.strptime(date_stop, '%d-%b-%Y') - datetime.strptime(date_sta
+rt, '%d-%b-%Y')
+Out[24]: datetime.timedelta(7850) 
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850 days
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
