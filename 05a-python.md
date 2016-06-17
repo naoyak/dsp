@@ -31,7 +31,7 @@ member_set = {'Amy', 'John', 'Ben', 'John'}
 {'Amy', 'John', 'Ben'} # duplicates removed
 ```
 
-Finding and element is much faster in sets, since membership is checked with a hashtable.
+Finding an element is much faster in sets, since membership is checked with a hashtable.
 
 ---
 
@@ -54,7 +54,44 @@ Out[2]: [-33, -2, 0, 12, 35]
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> A list comprehension is a syntactical construct in Python which creates a list where each element is a function of the individual elements returned by traversing an iterable. Map/filter is sometimes more concise if you already have an existing function to apply, but comprehensions are considered more readable and Pythonic.
+
+```python
+# Example 1
+# Using map()
+def add_one(x):
+	return x+1
+
+>> map(add_one, [0, 2, 5, 6, 7])
+[1, 3, 6, 7, 8]
+
+# Using a comprehension
+>> lst = [0, 2, 5, 6, 7]
+>> [x+1 for x in lst]
+[1, 3, 6, 7, 8]
+
+# Example 2
+# Using filter()
+def less_than_four(x):
+	return x < 4
+
+>> filter(less_than_five, [0, 1, 2, 3, 4, 5])
+[0, 1, 2, 3]
+
+# Using a comprehension
+>> lst = [0, 1, 2, 3, 4, 5]
+>> [x for x in lst if x < 4]
+[0, 1, 2, 3]
+
+# Example 3: set comprehension
+>> {x for x in [0, 1, 1, 2, 2, 3, 4, 5, 5, 6] if x < 4}
+{0, 1, 2, 3}
+
+# Example 4: dictionary comprehension
+>> fruit_counts =  {'apples': 4, 'bananas': 3, 'mangoes': 6, 'guavas': 8}
+>> {k:v for k, v in fruit_counts if v > 5}
+{'mangoes': 6, 'guavas': 8}
+```
 
 ---
 
